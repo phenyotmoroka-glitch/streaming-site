@@ -1,35 +1,34 @@
 /* ============================================================
-   STREAMLY – Login Page Styles
+   streamly – Login Page Styles
    Aesthetic: Dark neon-curator / retro-futuristic
    Fonts: Syne (display) + DM Sans (body)
    ============================================================ */
 
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 :root {
-  --bg:          #0a0a0a;
-  --surface:     #141416;
-  --surface-2:   #1c1c1f;
-  --border:      rgba(255,255,255,0.08);
-  --border-focus:rgba(0,229,255,0.55);
-  --text:        #e8e8ea;
-  --text-muted:  #7a7a8a;
-  --accent:      #00e5ff;
-  --accent-dim:  rgba(0,229,255,0.12);
-  --accent-glow: rgba(0,229,255,0.35);
-  --radius:      12px;
-  --transition:  0.25s ease;
+  --bg: #0a0a0a;
+  --surface: #141416;
+  --surface-2: #1c1c1f;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-focus: rgba(0, 229, 255, 0.55);
+  --text: #e8e8ea;
+  --text-muted: #7a7a8a;
+  --accent: #00e5ff;
+  --accent-dim: rgba(0, 229, 255, 0.12);
+  --accent-glow: rgba(0, 229, 255, 0.35);
+  --radius: 12px;
+  --transition: 0.25s ease;
 }
-
 
 body {
   background: var(--bg);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 1.6;
@@ -39,90 +38,67 @@ body {
   overflow-x: hidden;
 }
 
-
-
 /* ── Nav ── */
 
-.navbar{ 
-               
-                top: 0;
-              align-items: baseline;
-              padding: 1px 2px; 
-              position: fixed;                
-width: 100%;
-height: 40px;
-background-color: black;
-color: white;
-
+.navbar {
+  top: 0;
+  align-items: baseline;
+  padding: 1px 2px;
+  position: fixed;
+  width: 100%;
+  height: 40px;
+  background-color: black;
+  color: white;
 }
-.navbar-container{
-display: flex;
-padding:0px 50px;
-height: 100%;
-align-items: center;
-font-weight: bold;
-
+.navbar-container {
+  display: flex;
+  padding: 0px 50px;
+  height: 100%;
+  align-items: center;
+  font-weight: bold;
 }
 
-
-.logo-container{
-       margin-right: 1px;
-flex: none;
-
-
-
-
+.logo-container {
+  margin-right: 1px;
+  flex: none;
 }
 
-.logo{
-font-family: 'SpaceGrotesk';
-src: url('fonts/SpaceGrotesk-Regular.ttf') format('truetype');
+.logo {
+  font-family: "SpaceGrotesk";
+  src: url("fonts/SpaceGrotesk-Regular.ttf") format("truetype");
 
   font-style: normal;
   font-display: swap;
-font-size: 30px;
-color: #90EFFF;
+  font-size: 30px;
+  color: #90efff;
 }
 
-
-.menu-container{
-       flex: 1;
-
-
+.menu-container {
+  flex: 1;
 }
 
-.menu-list{
-display: flex;
-list-style: none;
+.menu-list {
+  display: flex;
+  list-style: none;
 }
 
-.menu-list-item{
-
-margin-right: 20px;
-
+.menu-list-item {
+  margin-right: 20px;
 }
 
-.profile-container{
-flex: 2;
-
+.profile-container {
+  flex: 2;
 }
 
-
-.icons{
-fill: white;
-display: flex;
+.icons {
+  fill: white;
+  display: flex;
   gap: 40px;
 }
 
-
-
-
-
-
-
 /* ── Main ── */
 .main {
-    margin-top: 21;
+  margin-top: 21;
   flex: 1;
   position: relative;
   z-index: 5;
@@ -146,9 +122,11 @@ display: flex;
 
 /* Subtle top-edge glow */
 .card::before {
-  content: '';
+  content: "";
   position: absolute;
-  top: 0; left: 10%; right: 10%;
+  top: 0;
+  left: 10%;
+  right: 10%;
   height: 1px;
   background: linear-gradient(90deg, transparent, var(--accent), transparent);
   opacity: 0.6;
@@ -159,8 +137,14 @@ display: flex;
 }
 
 @keyframes cardIn {
-  from { opacity: 0; transform: translateY(28px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0)    scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(28px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 /* ── Card header ── */
@@ -168,8 +152,6 @@ display: flex;
   margin-bottom: 32px;
   animation: fadeUp 0.5s 0.1s ease both;
 }
-
-
 
 .subtitle {
   color: var(--text-muted);
@@ -189,8 +171,12 @@ display: flex;
   animation: fadeUp 0.5s ease both;
 }
 
-.field:nth-child(1) { animation-delay: 0.15s; }
-.field:nth-child(2) { animation-delay: 0.2s; }
+.field:nth-child(1) {
+  animation-delay: 0.15s;
+}
+.field:nth-child(2) {
+  animation-delay: 0.2s;
+}
 
 .field input {
   width: 100%;
@@ -199,10 +185,13 @@ display: flex;
   border: 1px solid var(--border);
   border-radius: var(--radius);
   color: var(--text);
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 15px;
   outline: none;
-  transition: border-color var(--transition), background var(--transition), box-shadow var(--transition);
+  transition:
+    border-color var(--transition),
+    background var(--transition),
+    box-shadow var(--transition);
 }
 
 .field input::placeholder {
@@ -242,7 +231,8 @@ display: flex;
 /* Animated bottom line */
 .field-line {
   position: absolute;
-  bottom: 0; left: 0;
+  bottom: 0;
+  left: 0;
   height: 2px;
   width: 0;
   background: var(--accent);
@@ -252,7 +242,7 @@ display: flex;
 
 .field input:focus {
   border-color: var(--border-focus);
-  background: rgba(28,28,31,0.9);
+  background: rgba(28, 28, 31, 0.9);
   box-shadow: 0 0 0 3px var(--accent-dim);
 }
 
@@ -270,16 +260,17 @@ display: flex;
   color: #050d0e;
   border: none;
   border-radius: var(--radius);
-  font-family: 'Syne', sans-serif;
+  font-family: "Syne", sans-serif;
   font-weight: 700;
   font-size: 15px;
   letter-spacing: 0.04em;
   cursor: pointer;
   overflow: hidden;
-  transition: transform 0.15s ease, box-shadow 0.25s ease;
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.25s ease;
   animation: fadeUp 0.5s 0.25s ease both;
 }
-
 
 /* ── Form footer ── */
 .form-footer {
@@ -314,7 +305,9 @@ display: flex;
   align-items: center;
   justify-content: center;
   flex-shrink: 0;
-  transition: border-color var(--transition), background var(--transition);
+  transition:
+    border-color var(--transition),
+    background var(--transition);
 }
 
 .remember input:checked ~ .checkmark {
@@ -323,7 +316,7 @@ display: flex;
 }
 
 .remember input:checked ~ .checkmark::after {
-  content: '';
+  content: "";
   display: block;
   width: 4px;
   height: 7px;
@@ -334,7 +327,6 @@ display: flex;
 }
 
 /* ── Links ── */
-
 
 .link:hover {
   color: var(--text);
@@ -370,7 +362,7 @@ display: flex;
 
 .divider::before,
 .divider::after {
-  content: '';
+  content: "";
   flex: 1;
   height: 1px;
   background: var(--border);
@@ -392,23 +384,10 @@ display: flex;
   animation: fadeUp 0.5s 0.36s ease both;
 }
 
-
-
-
-
-
-
 /* ── Footer ── */
-   footer{
-padding: 10px 20px;
-width: 100%;
-margin: 0;
-background-color: #141414;
-
-
-       }
-
-
-
-
-
+footer {
+  padding: 10px 20px;
+  width: 100%;
+  margin: 0;
+  background-color: #141414;
+}
