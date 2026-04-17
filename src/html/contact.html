@@ -4,28 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!--Custom CSS -->
-<link rel="stylesheet" href="../css/main.css">
+<link rel="stylesheet" href="../css/contact.css">
 
     <title>Page Title</title>
 </head>
 <body>
 	<main>
 <div class="navbar">
-	<div class="navbar-container">
-		<div class="logo-container"><a href="/index.html">    <h1 class="logo">streamly</h1></a></div>
-			<div class="menu-container">
-			<ul class= "menu-list">
-				
-				<li class= "menu-list-item">Browse</li>
-				
-				
-				
-			</ul>
-			</div>
-			<span>search</span>
-      <span>profile</span>
-			</div>
-			</div>
+        <div class="navbar-container">
+          <div class="logo-container">
+           <span><a href="/index.html"> <h1 class="logo">streamly</h1></a></span>
+          </div>
+          <div class="menu-container">
+            <ul class="menu-list">
+              <li class="menu-list-item"><a href="/index.html">Home</a></li>
+              <li class="menu-list-item">Browse</li>
+            </ul>
+          </div>
+
+
+          <div class="icons">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          
+
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+      
 
 
 
@@ -33,31 +44,32 @@
   <section class="container">
     
     <!-- Left -->
-    <div class="form-section">
+    <form class="form-section">
       <h1>How can we <span>help?</span></h1>
       <p>Get in touch with us.</p>
 
       <div class="row">
-        <input type="text" placeholder="Your name">
-        <input type="email" placeholder="Email address">
+        <input type="text" placeholder="Your name"required>
+        <input type="email" placeholder="Email address"required>
       </div>
 
-      <select>
-        <option>Technical Support</option>
+      <select required>
+        <option value=""disabled selected hidden>Choose an option... </option>
+        <option >Technical Support</option>
         <option>Billing</option>
         <option>General Inquiry</option>
       </select>
 
       <textarea placeholder="How can we assist you?"></textarea>
 
-      <button>Send Message</button>
-    </div>
+      <button type="submit">Send Message</button>
+    </form>
 
     <!-- Right -->
     <div class="info-section">
       <div class="info-box">
         <h4>Email Support</h4>
-        <p>support@streamly.app</p>
+       <a href="mailto:support@streamly.app">support@streamly.app</a> 
       </div>
 
       
@@ -66,7 +78,7 @@
         <h3>Frequently Asked Questions</h3>
         <details>
           <summary>Can I watch offline?</summary>
-          <p>YES, downloading content to watch offline is possiBLE.</p>
+          <p>YES! downloading content to watch offline is possible.</p>
         </details>
         <details>
           <summary>How do I cancel?</summary>

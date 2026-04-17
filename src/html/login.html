@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Page Title</title>
-    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/login.css" />
    
   </head>
   <body>
@@ -12,36 +12,133 @@
       <div class="navbar">
         <div class="navbar-container">
           <div class="logo-container">
-            <a href="/index.html"> <h1 class="logo">streamly</h1></a>
+           <span><a href="/index.html"> <h1 class="logo">Streamly</h1></a></span>
           </div>
           <div class="menu-container">
             <ul class="menu-list">
+              <li class="menu-list-item"><a href="/index.html">Home</a></li>
               <li class="menu-list-item">Browse</li>
             </ul>
           </div>
+
+
           <div class="icons">
-            <span>search</span>
-            <span>profile</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search-icon lucide-search"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          
+
+
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-user-icon lucide-user"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          </div>
+
+
           </div>
         </div>
       </div>
 
-      <h1>Sign In</h1>
-      <p class="subtitle">Welcome back.</p>
 
-      <form>
-        <input type="email" placeholder="Email Address" required />
-        <input type="password" placeholder="Password" required />
+    
 
-        <button type="submit">Sign In</button>
+  
 
-        <div class="options">
-          <label> <input type="checkbox" /> Remember me </label>
-          <a href="#">Forgot password?</a>
+
+  <!-- Background grid + glow -->
+  <div class="bg-grid"></div>
+  <div class="bg-glow"></div>
+
+
+  
+
+
+
+
+  <!-- Main -->
+  <main class="main">
+    <div class="card">
+      <div class="card-inner">
+
+        <div class="card-header">
+          <h1 class="title">Sign In</h1>
+          <p class="subtitle">Welcome back.</p>
         </div>
-      </form>
-    </main>
 
+        <form class="form" onsubmit="return false;">
+          <div class="field">
+            <input type="email" id="email" placeholder="Email address " />
+            <label for="email">Email address</label>
+            <span class="field-line"></span>
+          </div>
+
+          <div class="field">
+            <input type="password" id="password" placeholder="Password "/>
+            <label for="password">Password</label>
+            <span class="field-line"></span>
+          </div>
+
+          <button type="submit" class="btn-signin">
+            <span class="btn-text">Sign In</span>
+            <span class="btn-glow"></span>
+          </button>
+
+          <div class="form-footer">
+            <label class="remember">
+              <input type="checkbox" />
+              <span class="checkmark"></span>
+              <span>Remember me</span>
+            </label>
+            <a href="#" class="link">Forgot password?</a>
+          </div>
+        </form>
+
+        <div class="divider"><span>or</span></div>
+
+        <p class="signup-line">
+          New to Streamly? <a href="accountCreate.html" class="link accent">Sign up now</a>.
+        </p>
+
+        
+        
+
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
     <footer>
       <p>Copyright&copy; 2026 Visor Inc. All rights reserved.</p>
       <p></p>
