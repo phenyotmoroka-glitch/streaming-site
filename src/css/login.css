@@ -1,76 +1,73 @@
-/* ============================================================
-   streamly – Login Page Styles
-   Aesthetic: Dark neon-curator / retro-futuristic
-   Fonts: Syne (display) + DM Sans (body)
-   ============================================================ */
-
-* {
+/* ─────────────────── login ─────────────────── */
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+/* ─────────────────── VARIABLES ─────────────────── */
 :root {
   --bg: #0a0a0a;
   --surface: #141416;
   --surface-2: #1c1c1f;
-  --border: rgba(255, 255, 255, 0.08);
-  --border-focus: rgba(0, 229, 255, 0.55);
+  --border: rgba(255, 255, 255, 0.12);
+  --accent: #00e5ff;
+  --accent-soft: rgba(0, 229, 255, 0.12);
+
   --text: #e8e8ea;
   --text-muted: #7a7a8a;
-  --accent: #00e5ff;
-  --accent-dim: rgba(0, 229, 255, 0.12);
-  --accent-glow: rgba(0, 229, 255, 0.35);
-  --radius: 12px;
-  --transition: 0.25s ease;
+
+  --radius: 8px;
 }
 
+/* ─────────────────── BASE ─────────────────── */
 body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: "DM Sans", sans-serif;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 1.6;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
+
+  background: var(--bg);
+  color: var(--text);
+  font: 15px/1.6 "DM Sans", "Segoe UI", sans-serif;
 }
 
-/* ── Nav ── */
+a {
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: 0.2s;
+}
+a:hover {
+  color: var(--text);
+}
 
+/* ─────────────────── NAVBAR ─────────────────── */
 .navbar {
-  top: 0;
-  align-items: baseline;
-  padding: 1px 2px;
   position: fixed;
+  top: 0;
   width: 100%;
-  height: 40px;
-  background-color: black;
-  color: white;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+
+  padding: 0 40px;
+  background: #0d0d0d;
+  border-bottom: 1px solid var(--border);
 }
+
 .navbar-container {
   display: flex;
-  padding: 0px 50px;
-  height: 100%;
   align-items: center;
-  font-weight: bold;
-}
-
-.logo-container {
-  margin-right: 1px;
-  flex: none;
+  gap: 32px;
+  width: 100%;
 }
 
 .logo {
-  font-family: "SpaceGrotesk";
-  src: url("fonts/SpaceGrotesk-Regular.ttf") format("truetype");
-
-  font-style: normal;
-  font-display: swap;
-  font-size: 30px;
-  color: #90efff;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--accent);
 }
 
 .menu-container {
@@ -79,285 +76,181 @@ body {
 
 .menu-list {
   display: flex;
+  gap: 24px;
   list-style: none;
 }
 
 .menu-list-item {
-  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+
 }
 
-.profile-container {
-  flex: 2;
+.menu-list-item a,
+.menu-list-item {
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.menu-list-item a:hover {
+  color: var(--accent);
+}
+
+.menu-list-item:hover {
+  color: var(--accent);
 }
 
 .icons {
-  fill: white;
   display: flex;
-  gap: 40px;
+  gap: 20px;
+}
+.icons svg {
+  stroke: var(--text);
+  cursor: pointer;
+  transition: 0.2s;
+}
+.icons svg:hover {
+  stroke: var(--accent);
 }
 
-/* ── Main ── */
+/* ─────────────────── MAIN ─────────────────── */
 .main {
-  margin-top: 21;
   flex: 1;
-  position: relative;
-  z-index: 5;
   display: flex;
-  align-items: center;
   justify-content: center;
-  padding: 48px 16px;
+  align-items: center;
+
+  padding: 80px 16px 48px;
 }
 
-/* ── Card ── */
+/* ─────────────────── CARD ─────────────────── */
 .card {
   width: 100%;
   max-width: 420px;
+
   background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 18px;
-  position: relative;
-  overflow: hidden;
-  animation: cardIn 0.55s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-/* Subtle top-edge glow */
-.card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 10%;
-  right: 10%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--accent), transparent);
-  opacity: 0.6;
+  border-radius: 14px;
 }
 
 .card-inner {
-  padding: 40px 40px 36px;
+  padding: 40px;
 }
 
-@keyframes cardIn {
-  from {
-    opacity: 0;
-    transform: translateY(28px) scale(0.97);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-/* ── Card header ── */
-.card-header {
-  margin-bottom: 32px;
-  animation: fadeUp 0.5s 0.1s ease both;
+/* ─────────────────── TEXT ─────────────────── */
+.title {
+  font-size: 1.9rem;
+  font-weight: 700;
 }
 
 .subtitle {
-  color: var(--text-muted);
   font-size: 14px;
+  color: var(--text-muted);
+  margin-top: 4px;
 }
 
-/* ── Form ── */
+/* ─────────────────── FORM ─────────────────── */
 .form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  margin-top: 24px;
 }
 
-/* ── Fields ── */
-.field {
-  position: relative;
-  animation: fadeUp 0.5s ease both;
-}
-
-.field:nth-child(1) {
-  animation-delay: 0.15s;
-}
-.field:nth-child(2) {
-  animation-delay: 0.2s;
-}
-
+/* Inputs */
 .field input {
   width: 100%;
-  padding: 16px 16px 14px;
+  padding: 13px 16px;
+
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: var(--radius);
+
   color: var(--text);
-  font-family: "DM Sans", sans-serif;
-  font-size: 15px;
-  outline: none;
-  transition:
-    border-color var(--transition),
-    background var(--transition),
-    box-shadow var(--transition);
+  font: inherit;
 }
 
 .field input::placeholder {
-  color: transparent;
-}
-
-/* Floating label */
-.field label {
-  position: absolute;
-  left: 16px;
-  top: 50%;
-  transform: translateY(-50%);
   color: var(--text-muted);
-  font-size: 14px;
-  pointer-events: none;
-  transition: all var(--transition);
-  transform-origin: left center;
-}
-
-.field input:focus + label,
-.field input:not(:placeholder-shown) + label {
-  top: 10px;
-  font-size: 10px;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--accent);
-  transform: translateY(0);
-}
-
-/* When label is floating, shift input text down */
-.field input:focus,
-.field input:not(:placeholder-shown) {
-  padding-top: 22px;
-  padding-bottom: 8px;
-}
-
-/* Animated bottom line */
-.field-line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 2px;
-  width: 0;
-  background: var(--accent);
-  border-radius: 0 0 var(--radius) var(--radius);
-  transition: width 0.35s ease;
 }
 
 .field input:focus {
-  border-color: var(--border-focus);
-  background: rgba(28, 28, 31, 0.9);
-  box-shadow: 0 0 0 3px var(--accent-dim);
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
-.field input:focus ~ .field-line {
-  width: 100%;
-}
-
-/* ── Sign In button ── */
+/* Button */
 .btn-signin {
-  position: relative;
-  width: 100%;
-  padding: 15px;
   margin-top: 4px;
-  background: var(--accent);
-  color: #050d0e;
+  padding: 13px;
+
   border: none;
   border-radius: var(--radius);
-  font-family: "Syne", sans-serif;
+
+  background: var(--accent);
+  color: #050d0e;
   font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.04em;
   cursor: pointer;
-  overflow: hidden;
-  transition:
-    transform 0.15s ease,
-    box-shadow 0.25s ease;
-  animation: fadeUp 0.5s 0.25s ease both;
+
+  transition: 0.2s;
+}
+.btn-signin:hover {
+  background: #33ecff;
 }
 
-/* ── Form footer ── */
+/* Footer row */
 .form-footer {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  animation: fadeUp 0.5s 0.3s ease both;
+  align-items: center;
 }
 
-/* Custom checkbox */
+/* Checkbox */
 .remember {
   display: flex;
   align-items: center;
   gap: 8px;
-  cursor: pointer;
   font-size: 13px;
   color: var(--text-muted);
-  user-select: none;
+  cursor: pointer;
 }
 
-.remember input[type="checkbox"] {
+.remember input {
   display: none;
 }
 
 .checkmark {
   width: 16px;
   height: 16px;
+
   border: 1.5px solid var(--border);
   border-radius: 4px;
   background: var(--surface-2);
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-  transition:
-    border-color var(--transition),
-    background var(--transition);
 }
 
-.remember input:checked ~ .checkmark {
+.remember input:checked + .checkmark {
   background: var(--accent);
   border-color: var(--accent);
 }
 
-.remember input:checked ~ .checkmark::after {
-  content: "";
-  display: block;
-  width: 4px;
-  height: 7px;
-  border: 2px solid #050d0e;
-  border-top: none;
-  border-left: none;
-  transform: rotate(45deg) translateY(-1px);
+/* Links */
+.link {
+  font-size: 13px;
 }
-
-/* ── Links ── */
-
-.link:hover {
-  color: var(--text);
-}
-
 .link.accent {
   color: var(--accent);
-  font-weight: 500;
 }
 
-.link.accent:hover {
-  text-decoration: underline;
-  text-underline-offset: 3px;
-}
-
-.link.dim {
-  color: var(--text-muted);
-  font-size: 12px;
-}
-
-.link.dim:hover {
-  color: var(--accent);
-}
-
-/* ── Divider ── */
+/* Divider */
 .divider {
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 24px 0 20px;
-  animation: fadeUp 0.5s 0.32s ease both;
+  margin: 20px 0;
 }
 
 .divider::before,
@@ -369,25 +262,35 @@ body {
 }
 
 .divider span {
-  color: var(--text-muted);
   font-size: 12px;
-  letter-spacing: 0.05em;
+  color: var(--text-muted);
   text-transform: uppercase;
 }
 
-/* ── Sign-up line ── */
+/* Signup text */
 .signup-line {
+  text-align: center;
   font-size: 14px;
   color: var(--text-muted);
-  text-align: center;
-  margin-bottom: 20px;
-  animation: fadeUp 0.5s 0.36s ease both;
 }
 
-/* ── Footer ── */
+/* ─────────────────── FOOTER ─────────────────── */
 footer {
-  padding: 10px 20px;
-  width: 100%;
-  margin: 0;
-  background-color: #141414;
+  padding: 16px 24px;
+  font-size: 12px;
+
+  background:  #141414;
+  
+ 
+}
+
+/* ─────────────────── RESPONSIVE ─────────────────── */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0 20px;
+  }
+
+  .card-inner {
+    padding: 28px 20px;
+  }
 }
