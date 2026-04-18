@@ -1,84 +1,111 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Movie Site</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="utf-8" />
+    <title>Tehillah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<!--Custom CSS -->
-<link rel="stylesheet" href="../css/main.css">
+    <!--Custom CSS -->
+    <link rel="stylesheet" href="../css/main.css" />
 
+    <!--Fonts -->
+  </head>
 
-<!--Fonts -->
-</head>
-
-<body>
-	<main>
-	<nav class="navbar">
-  <div class="navbar-container">
-    <div class="logo-container">
-      <a href="/index.html"><h1 class="logo">streamly</h1></a>
-    </div>
-    <div class="menu-container">
-      <ul class="menu-list">
-        <li class="menu-list-item"><a href="/index.html">Home</a></li>
-        <li class="menu-list-item browse-item" id="browseItem">
-  Browse
-  <div class="browse-dropdown">
-    <a href="/src/html/series.html">Series</a>
-    <a href="/src/html/films.html">Films</a>
-  </div>
-</li>
-      </ul>
-    </div>
-    <div class="icons">
-      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
-      <div class="profile-icon" id="profileIcon">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-        <div class="profile-dropdown">
-          <a href="/src/html/login.html">Login</a>
-          <a href="/src/html/accountCreate.html">Create Account</a>
+  <body>
+    
+      <nav class="navbar">
+        <div class="navbar-container">
+          <div class="logo-container">
+            <a href="/index.html"><h1 class="logo">streamly</h1></a>
+          </div>
+          <div class="menu-container">
+            <ul class="menu-list">
+              <li class="menu-list-item"><a href="/index.html">Home</a></li>
+              <li class="menu-list-item browse-item" id="browseItem">
+                Browse
+                <div class="browse-dropdown">
+                  <a href="/src/html/series.html">Series</a>
+                  <a href="/src/html/films.html">Films</a>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="icons">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="m21 21-4.34-4.34" />
+              <circle cx="11" cy="11" r="8" />
+            </svg>
+            <div class="profile-icon" id="profileIcon">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2" />
+                <circle cx="12" cy="7" r="4" />
+              </svg>
+              <div class="profile-dropdown">
+                <a href="/src/html/login.html">Login</a>
+                <a href="/src/html/accountCreate.html">Create Account</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <main>
+<main>
+      <div class="search-hero">
+        <div class="search-input-wrap">
+          <input
+            type="text"
+            class="search-input"
+            id="searchInput"
+            placeholder="Type here..."
+            autocomplete="off"
+            autofocus
+          />
+          <button class="search-clear" id="searchClear" aria-label="Clear">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
         </div>
       </div>
-    </div>
-  </div>
-</nav>
 
+      <div class="search-results" id="searchResults">
+        <div class="search-empty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <span>Start typing to search anime</span>
+        </div>
+      </div>
     </main>
 
 
+    </main>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
-<footer>
-
-	<p>Copyright&copy; 2026 Visor Inc. All rights reserved.</p> 
-		 <p> <p><a href="contact.html">Contact us  </a>
-		 <a href="login.html">   |Login   </a>
-		<a href="accountCreate.html">         |Create Account   </a>
-		
-		
-	</p>
-	
-</footer>
-<script src="/src/js/main.js"></script>
-</body>
-
+    <footer>
+      <p>Copyright&copy; 2026 Visor Inc. All rights reserved.</p>
+      <p></p>
+      <p>
+        <a href="contact.html">Contact us </a>
+        <a href="login.html"> |Login </a>
+        <a href="accountCreate.html"> |Create Account </a>
+      </p>
+    </footer>
+    <script src="/src/js/main.js"></script>
+  </body>
 </html>

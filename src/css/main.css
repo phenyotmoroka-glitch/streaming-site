@@ -191,7 +191,92 @@ a:hover {
 
 
 
+/* ─────────────────── SEARCH PAGE ─────────────────── */
+.search-hero {
+  padding: 80px 60px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
 
+
+
+.search-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid var(--text-muted);
+  border-radius: 0;
+  color: var(--text);
+  font-size: 2rem;
+  font-weight: 400;
+  padding: 12px 48px 12px 0;
+  outline: none;
+  caret-color: var(--accent);
+  transition: border-color 0.2s;
+}
+
+.search-input:focus {
+  border-bottom-color: var(--accent);
+}
+
+.search-input::placeholder {
+  color: rgba(232, 232, 234, 0.25);
+}
+
+.search-clear {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  display: none;
+}
+
+.search-clear svg {
+  stroke: var(--text-muted);
+  transition: 0.2s;
+}
+
+.search-clear:hover svg {
+  stroke: var(--text);
+}
+
+.search-clear.visible {
+  display: block;
+}
+
+.search-results {
+  padding: 48px 60px;
+}
+
+.search-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 80px 0;
+  color: var(--text-muted);
+  font-size: 15px;
+  gap: 12px;
+}
+
+.search-empty svg {
+  stroke: rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 480px) {
+  .search-hero {
+    padding: 70px 20px 32px;
+  }
+  .search-input {
+    font-size: 1.4rem;
+  }
+  .search-results {
+    padding: 32px 20px;
+  }
+}
 
 
 
