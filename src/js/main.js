@@ -21,7 +21,7 @@ document.addEventListener('click', () => {
 /* ─────────────────── LINKING SEARCH icon to search.html ─────────────────── */
 
 document.querySelector('.icons svg').addEventListener('click', () => {
-  window.location.href = './src/html/search.html';
+  window.location.href = '/src/html/search.html';
 });
 
 
