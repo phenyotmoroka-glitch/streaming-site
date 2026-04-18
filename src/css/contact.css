@@ -230,6 +230,96 @@ details p {
   margin-top: 10px;
 }
 
+
+
+
+/* ─────────────────── PROFILE DROPDOWN ─────────────────── */
+.profile-icon {
+  position: relative;
+  cursor: pointer;
+}
+
+.profile-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  min-width: 160px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.profile-icon.open .profile-dropdown {
+  display: block;
+}
+
+.profile-dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.profile-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+
+
+
+/* ─────────────────── BROWSE DROPDOWN ─────────────────── */
+.browse-item {
+  position: relative;
+}
+
+.browse-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 0;
+  min-width: 140px;
+  background: rgba(20, 20, 20, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 200;
+}
+
+.browse-item.open .browse-dropdown {
+  display: block;
+}
+
+.browse-dropdown a {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  transition: background 0.15s;
+}
+
+.browse-dropdown a:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+}
+
+
+
+
+
+
 /* ─────────────────── FOOTER ─────────────────── */
 footer {
   padding: 16px 24px;
