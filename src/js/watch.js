@@ -1,6 +1,22 @@
+const loadingMessages = [
+  "Still better than Microslop updates...",
+  "We're just testing your patience...",
+  "Locating the Internet...",
+  "Who even is Tehillah...",
+  "One Piece is better than your favourite anime...",
+  "Loading screens are paid actors...",
+  "Bribing the servers...",
+  "Asking Zoro for directions...",
+  "This is taking longer than One Piece's runtime...",
+];
+
+const randomMessage = loadingMessages[Math.floor(Math.random() * loadingMessages.length)];
+
 const params = new URLSearchParams(window.location.search);
 const animeId = params.get('id');
 const container = document.getElementById('watchContainer');
+
+container.innerHTML = `<div class="watch-loading">${randomMessage}</div>`;
 
 if (!animeId) {
   container.innerHTML = '<div class="watch-loading">No anime ID provided.</div>';
