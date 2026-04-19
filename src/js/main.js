@@ -1,8 +1,7 @@
 /* ─────────────────── BASE PATH ─────────────────── */
-const BASE = window.location.hostname === 'localhost' ||
-             window.location.hostname === '127.0.0.1'
-             ? ''
-             : '/streaming-site';
+const BASE = window.location.pathname.includes('/streaming-site')
+  ? '/streaming-site'
+  : '';
 
 /* ─────────────────── PROFILE DROPDOWN ─────────────────── */
 const profileIcon = document.getElementById('profileIcon');
