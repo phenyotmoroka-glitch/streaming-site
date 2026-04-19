@@ -153,7 +153,7 @@ function renderWatch(anime, characters, recommendations, openingVideoUrl) {
         ${recommendations.slice(0, 16).map(r => {
           const a = r.entry;
           return `
-            <a class="rec-card" href="/src/html/watch.html?id=${a.mal_id}">
+            <a class="rec-card" href="${BASE}/src/html/watch.html?id=${a.mal_id}">
               <img src="${a.images?.jpg?.large_image_url || a.images?.jpg?.image_url}" alt="${a.title}" />
               <div class="rec-card-title">${a.title}</div>
             </a>`;
