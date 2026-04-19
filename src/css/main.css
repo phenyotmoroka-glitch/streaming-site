@@ -306,3 +306,187 @@ footer {
     padding: 0 20px;
   }
 }
+
+
+/* ─────────────────── SEARCH RESULTS ─────────────────── */
+.search-section {
+  margin-bottom: 48px;
+}
+
+.search-section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.search-section-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.search-see-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.search-see-more:hover {
+  color: var(--text);
+}
+
+.search-see-more svg {
+  stroke: var(--accent);
+  transition: 0.2s;
+}
+
+.search-see-more:hover svg {
+  stroke: var(--text);
+}
+
+/* Top results carousel - bigger */
+.top-results-grid {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.top-results-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.top-result-card {
+  flex-shrink: 0;
+  width: 200px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.top-result-card:hover {
+  transform: scale(1.04);
+}
+
+.top-result-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--surface-2);
+}
+
+.top-result-card .card-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text);
+  margin-top: 10px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.top-result-card .card-type {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* Series/films carousel - slightly smaller */
+.search-carousel {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.search-carousel::-webkit-scrollbar {
+  display: none;
+}
+
+.search-carousel-card {
+  flex-shrink: 0;
+  width: 150px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform 0.2s;
+}
+
+.search-carousel-card:hover {
+  transform: scale(1.04);
+}
+
+.search-carousel-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: var(--surface-2);
+}
+
+.search-carousel-card .card-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 8px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.search-carousel-card .card-type {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+/* Skeleton loading */
+.skeleton {
+  background: var(--surface-2);
+  border-radius: 6px;
+  animation: shimmer 1.4s infinite;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+.skeleton-card {
+  flex-shrink: 0;
+}
+
+.skeleton-poster {
+  border-radius: 8px;
+  background: var(--surface-2);
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-text {
+  height: 12px;
+  border-radius: 4px;
+  margin-top: 10px;
+  background: var(--surface-2);
+  animation: shimmer 1.4s infinite;
+}
+
+.skeleton-text.short {
+  width: 60%;
+  margin-top: 6px;
+}
