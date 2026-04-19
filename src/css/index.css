@@ -1,0 +1,273 @@
+/* ─────────────────── HERO CAROUSEL ─────────────────── */
+.hero {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-track {
+  display: flex;
+  height: 100%;
+  transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+
+.hero-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.hero-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+
+.hero-slide-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.75) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.1) 100%
+  );
+}
+
+.hero-info {
+  position: absolute;
+  bottom: 80px;
+  left: 48px;
+  max-width: 420px;
+  z-index: 2;
+}
+
+.hero-info-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 8px;
+  line-height: 1.2;
+}
+
+.hero-info-meta {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 16px;
+}
+
+.hero-play-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 24px;
+  background: var(--accent);
+  color: #050d0e;
+  font-weight: 700;
+  font-size: 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.2s;
+  cursor: pointer;
+  border: none;
+}
+
+.hero-play-btn:hover {
+  background: #33ecff;
+  color: #050d0e;
+}
+
+.hero-play-btn svg {
+  fill: #050d0e;
+  width: 16px;
+  height: 16px;
+}
+
+/* ─── CLICK ZONES ─── */
+.hero-zone {
+  position: absolute;
+  top: 0;
+  width: 25%;
+  height: 100%;
+  z-index: 3;
+  cursor: pointer;
+}
+
+.hero-zone-left { left: 0; }
+.hero-zone-right { right: 0; }
+
+/* ─── DOTS ─── */
+.hero-dots {
+  position: absolute;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 4;
+}
+
+.hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.35);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.hero-dot.active {
+  background: var(--accent);
+  transform: scale(1.3);
+}
+
+
+
+/* ─────────────────── CAROUSELS ─────────────────── */
+.carousels-section {
+  padding: 40px 48px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+.carousel-block {
+  width: 100%;
+}
+
+.carousel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.carousel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.carousel-see-more {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.carousel-see-more:hover {
+  color: var(--text);
+}
+
+.carousel-see-more svg {
+  stroke: var(--accent);
+  transition: 0.2s;
+  fill: none;
+  width: 16px;
+  height: 16px;
+}
+
+.carousel-see-more:hover svg {
+  stroke: var(--text);
+}
+
+.carousel-track {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding-bottom: 8px;
+  scrollbar-width: none;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-card {
+  flex-shrink: 0;
+  width: 150px;
+  text-decoration: none;
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.carousel-card:hover {
+  transform: scale(1.04);
+}
+
+.carousel-card img {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  background: var(--surface-2);
+}
+
+.carousel-card-title {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text);
+  margin-top: 8px;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.carousel-card-type {
+  font-size: 11px;
+  color: var(--text-muted);
+  margin-top: 3px;
+}
+
+.carousel-skeleton-card {
+  flex-shrink: 0;
+  width: 150px;
+}
+
+.carousel-skeleton-img {
+  width: 150px;
+  height: 225px;
+  border-radius: 6px;
+  background: var(--surface-2);
+  animation: shimmer 1.4s infinite;
+}
+
+.carousel-skeleton-text {
+  height: 11px;
+  border-radius: 4px;
+  margin-top: 8px;
+  background: var(--surface-2);
+  animation: shimmer 1.4s infinite;
+}
+
+.carousel-skeleton-text.short {
+  width: 60%;
+  margin-top: 5px;
+}
+
+@keyframes shimmer {
+  0% { opacity: 0.4; }
+  50% { opacity: 0.8; }
+  100% { opacity: 0.4; }
+}
+
+@media (max-width: 480px) {
+  .carousels-section {
+    padding: 24px 16px 48px;
+  }
+}
