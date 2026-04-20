@@ -80,12 +80,12 @@ const carouselConfigs = [
   {
     title: 'Series',
     url: 'https://api.jikan.moe/v4/top/anime?type=tv&limit=10',
-    seeMore: `${BASE}/src/html/series.html`
+    seeMore: `${BASE}/src/html/browse.html?type=tv`
   },
   {
     title: 'Films',
     url: 'https://api.jikan.moe/v4/top/anime?type=movie&limit=10',
-    seeMore: `${BASE}/src/html/films.html`
+    seeMore: `${BASE}/src/html/browse.html?type=movie`
   },
   {
     title: 'Shonen',

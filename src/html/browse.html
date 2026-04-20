@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Browse — Streamly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/browse.css" />
+  </head>
+  <body>
+
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo-container">
+          <a href="/streaming-site/index.html"><h1 class="logo">streamly</h1></a>
+        </div>
+        <div class="menu-container">
+          <ul class="menu-list">
+            <li class="menu-list-item"><a href="/streaming-site/index.html">Home</a></li>
+            <li class="menu-list-item"><a href="browse.html">Browse</a></li>
+          </ul>
+        </div>
+        <div class="icons">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+          <div class="profile-icon" id="profileIcon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+            <div class="profile-dropdown">
+              <a href="login.html">Login</a>
+              <a href="accountCreate.html">Create Account</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <div class="browse-header">
+        <div class="browse-top">
+          <h1 class="browse-title" id="browseTitle">Browse</h1> 
+
+          <div class="browse-search-wrap">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m21 21-4.34-4.34"/><circle cx="11" cy="11" r="8"/></svg>
+            <input type="text" id="browseSearch" class="browse-search-input" placeholder="Filter results..." autocomplete="off" />
+          </div>
+        </div>
+        <div class="browse-tabs">
+          <button class="browse-tab" data-type="">All</button>
+          <button class="browse-tab" data-type="tv">Series</button>
+          <button class="browse-tab" data-type="movie">Films</button>
+        </div>
+      </div>
+
+      <div class="browse-grid" id="browseGrid">
+        <!-- cards injected by JS -->
+      </div>
+
+      <div class="browse-load-more-wrap">
+        <button class="browse-load-more" id="browseLoadMore">Load More</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright&copy; 2026 Visor Inc. All rights reserved.</p>
+      <p>
+        <a href="contact.html">Contact us</a>
+        <a href="login.html"> |Login</a>
+        <a href="accountCreate.html"> |Create Account</a>
+      </p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/browse.js"></script>
+  </body>
+</html>

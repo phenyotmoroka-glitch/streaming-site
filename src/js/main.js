@@ -13,15 +13,7 @@ document.addEventListener('click', () => {
   profileIcon.classList.remove('open');
 });
 
-/* ─────────────────── BROWSE DROPDOWN ─────────────────── */
-const browseItem = document.getElementById('browseItem');
-browseItem.addEventListener('click', e => {
-  e.stopPropagation();
-  browseItem.classList.toggle('open');
-});
-document.addEventListener('click', () => {
-  browseItem.classList.remove('open');
-});
+
 
 /* ─────────────────── SEARCH ICON ─────────────────── */
 document.querySelector('.icons svg').addEventListener('click', () => {
