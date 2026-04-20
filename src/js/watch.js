@@ -5,6 +5,7 @@ const loadingMessages = [
   "Who even is Tehillah...",
   "One Piece is better than your favourite anime...",
   "Loading screens are paid actors...",
+  "خلاص، يلا...",
   "Bribing the servers...",
   "Asking Zoro for directions...",
   "This is taking longer than One Piece's runtime...",
