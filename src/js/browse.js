@@ -1,6 +1,3 @@
-const BASE = window.location.pathname.includes('/streaming-site')
-  ? '/streaming-site'
-  : '';
 
 const params = new URLSearchParams(window.location.search);
 let activeType = params.get('type') || '';
