@@ -33,7 +33,7 @@ function startAuto() {
   clearInterval(autoTimer);
   autoTimer = setInterval(() => {
     if (!paused) next();
-  }, 10000);
+  }, 5000);
 }
 
 function pause() {
