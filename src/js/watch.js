@@ -59,11 +59,14 @@ async function loadWatch(id) {
     const characters = chars.data || [];
     const recommendations = recs.data || [];
 
+
+/*failed loading screen*/
     document.title = `${anime.title} — Streamly`;
     renderWatch(anime, characters, recommendations, openingVideoUrl);
   } catch (err) {
     console.error(err);
-    container.innerHTML = '<div class="watch-loading">Failed to load. Please try again.</div>';
+   
+     container.innerHTML = '<div class="watch-loading">Try again?</div>';
   }
 }
 
