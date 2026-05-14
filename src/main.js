@@ -457,8 +457,7 @@ if (document.getElementById('watchContainer')) {
     "Still better than Microslop updates...",
     "We're just testing your patience...",
     "Locating the Internet...",
-    "Who even is Tehillah...",
-    "One Piece is better than your favourite anime...",
+    
     "Loading screens are paid actors...",
     "خلاص، يلا...",
     "Bribing the servers...",
