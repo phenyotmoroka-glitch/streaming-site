@@ -936,3 +936,6 @@ details p  { color: var(--text-muted); margin-top: 10px; }
   /* contact */
   .container { flex-direction: column; padding: 20px; gap: 40px; }
 }
+
+
+}

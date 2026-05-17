@@ -170,7 +170,13 @@ if (document.getElementById('browseGrid')) {
   const titleEl = document.getElementById('browseTitle');
   const tabs = document.querySelectorAll('.browse-tab');
 
-  if (activeQuery) browseSearch.value = activeQuery;
+  // Show search box only if a text query came from the search page
+if (activeQuery) {
+  browseSearch.value = activeQuery;
+  browseSearch.parentElement.style.display = 'flex'; // show it
+} else {
+  browseSearch.parentElement.style.display = 'none'; // hide it by default
+};
   setActiveTab(activeType);
   updateTitle();
 
@@ -410,7 +416,7 @@ if (document.getElementById('searchResults')) {
           <div class="search-section">
             <div class="search-section-header">
               <span class="search-section-title">Series</span>
-              <a class="search-see-more" href="${BASE}/src/html/browse.html?type=tv&q=${encodeURIComponent(q)}">See more ${seeMoreSvg}</a>
+              <a class="search-see-more" href="${BASE}/src/browse.html?type=tv&q=${encodeURIComponent(q)}">See more ${seeMoreSvg}</a>
             </div>
             <div class="search-carousel">
               ${seriesData.map(a => `
@@ -425,7 +431,7 @@ if (document.getElementById('searchResults')) {
           <div class="search-section">
             <div class="search-section-header">
               <span class="search-section-title">Films</span>
-              <a class="search-see-more" href="${BASE}/src/html/browse.html?type=movie&q=${encodeURIComponent(q)}">See more ${seeMoreSvg}</a>
+              <a class="search-see-more" href="${BASE}/src/browse.html?type=movie&q=${encodeURIComponent(q)}">See more ${seeMoreSvg}</a>
             </div>
             <div class="search-carousel">
               ${filmsData.map(a => `
